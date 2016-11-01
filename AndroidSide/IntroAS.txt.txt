@@ -1,0 +1,9 @@
+this is the android side
+
+used:
+java
+javascript
+
+...
+
+i have no actual idea the differences for what needs to be pulled and added for android use so..reserch i shall do...

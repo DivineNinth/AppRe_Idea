@@ -1,0 +1,10 @@
+this is the web side of the application
+
+used:
+java
+javascript
+html
+bootstrap3
+
+most likely:
+grails
