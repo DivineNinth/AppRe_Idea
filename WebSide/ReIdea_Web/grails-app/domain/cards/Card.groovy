@@ -42,6 +42,20 @@ class Card {
 		return tags.size();
 	}
 	
+	String getTagsNames(){
+		String temp = "-";
+		if(tags!=null){
+			for(t in tags){
+				temp = temp+", "+t.name;
+			}
+		}
+		return temp;
+	}
+	
+	def getTags(){
+		return tags;
+	}
+	
 	String changeTitle(String t){
 		title = t;
 		return title;

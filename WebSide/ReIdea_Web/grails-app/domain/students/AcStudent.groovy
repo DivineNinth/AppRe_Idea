@@ -14,6 +14,8 @@ class AcStudent {
 	
 	Integer classification;
 	
+	Pack tutorialPack;
+	
 	static hasMany=[studyPacks: Pack]
 
 	static constraints = {
@@ -24,7 +26,7 @@ class AcStudent {
 		classification scale: 0..6
 	}
 	
-	AcStudent(String a, String f, String m, String l, String e, String s){
+	AcStudent(String a, String  f, String m, String l, String e, String s){
 		acId = a;
 		fName = f;
 		mI = m;
@@ -33,10 +35,39 @@ class AcStudent {
 		
 		classification = new Integer(s);
 		
-		Pack te = new Pack();//tutorial pack?
+		studyPacks = [];
+		addTutorialPack();
+	}
+	
+	AcStudent(String a, String f, String l){
+		acId = a;
+		fName = f;
+		mI = "";
+		lName = l;
+		acEmail = "";
+		
+		classification = 0;
 		
 		studyPacks = [];
-		studyPacks.add(te);
+		addTutorialPack
+	}
+	
+	AcStudent(){
+		acId = "";
+		fName = "";
+		mI = "";
+		lName = "";
+		acEmail = "";
+		
+		classification = 0;
+		
+		studyPacks = [];
+		addTutorialPack();
+	}
+	//tutorial pack?
+	void addTutorialPack(){
+		tutorialPack = new Pack();
+		studyPacks.add(tutorialPack);
 	}
 	
 	String getFullName(){
